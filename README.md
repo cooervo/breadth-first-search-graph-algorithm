@@ -1,94 +1,3 @@
-        var nodes = [
-            {
-                "name": "CLUSTER MID",
-                "_id": "ideation_node/47691669357"
-            },
-            {
-                "name": "0a",
-                "_id": "ideation_node/47682101101"
-            },
-            {
-                "name": "0b",
-                "_id": "ideation_node/47684853613"
-            },
-            {
-                "name": "0",
-                "_id": "ideation_node/47681118061"
-            },
-            {
-                "name": "CLUSTER0",
-                "_id": "ideation_node/47670959981"
-            },
-            {
-                "name": "CLUSTER1",
-                "_id": "ideation_node/47674105709"
-            },
-            {
-                "name": "1a",
-                "_id": "ideation_node/47688982381"
-            },
-            {
-                "name": "1",
-                "_id": "ideation_node/47686754157"
-            }
-        ];
-
-        var links = [
-            {
-                "_from": "ideation_node/47691669357",
-                "_to": "ideation_node/47682101101"
-            },
-            {
-                "_from": "ideation_node/47691669357",
-                "_to": "ideation_node/47681118061"
-            },
-            {
-                "_from": "ideation_node/47691669357",
-                "_to": "ideation_node/47674105709"
-            },
-            {
-                "_from": "ideation_node/47682101101",
-                "_to": "ideation_node/47684853613"
-            },
-            {
-                "_from": "ideation_node/47684853613",
-                "_to": "ideation_node/47691669357"
-            },
-            {
-                "_from": "ideation_node/47681118061",
-                "_to": "ideation_node/47682101101"
-            },
-            {
-                "_from": "ideation_node/47681118061",
-                "_to": "ideation_node/47674105709"
-            },
-            {
-                "_from": "ideation_node/47670959981",
-                "_to": "ideation_node/47681118061"
-            },
-            {
-                "_from": "ideation_node/47670959981",
-                "_to": "ideation_node/47674105709"
-            },
-            {
-                "_from": "ideation_node/47674105709",
-                "_to": "ideation_node/47684853613"
-            },
-            {
-                "_from": "ideation_node/47674105709",
-                "_to": "ideation_node/47686754157"
-            },
-            {
-                "_from": "ideation_node/47688982381",
-                "_to": "ideation_node/47684853613"
-            },
-            {
-                "_from": "ideation_node/47686754157",
-                "_to": "ideation_node/47688982381"
-            }
-        ];
-
-
         function getNodeById(nodeId) {
             let nodeToReturn;
 
@@ -138,6 +47,7 @@
                     }
 
                 });
+                // Queue holds unvisited neighbors
                 queue.splice(0, 1);
                 console.log("queue", JSON.stringify(queue.map(node => {
                     return node.name
@@ -148,3 +58,93 @@
 
         breadthFirstTraverseNodes();
 
+        // ======== SAMPLE DATA ========
+        var nodes = [
+            {
+                "name": "CLUSTER MID",
+                "_id": "47691669357"
+            },
+            {
+                "name": "0a",
+                "_id": "47682101101"
+            },
+            {
+                "name": "0b",
+                "_id": "47684853613"
+            },
+            {
+                "name": "0",
+                "_id": "47681118061"
+            },
+            {
+                "name": "CLUSTER0",
+                "_id": "47670959981"
+            },
+            {
+                "name": "CLUSTER1",
+                "_id": "47674105709"
+            },
+            {
+                "name": "1a",
+                "_id": "47688982381"
+            },
+            {
+                "name": "1",
+                "_id": "47686754157"
+            }
+        ];
+
+        var links = [
+            {
+                "_from": "47691669357",
+                "_to": "47682101101"
+            },
+            {
+                "_from": "47691669357",
+                "_to": "47681118061"
+            },
+            {
+                "_from": "47691669357",
+                "_to": "47674105709"
+            },
+            {
+                "_from": "47682101101",
+                "_to": "47684853613"
+            },
+            {
+                "_from": "47684853613",
+                "_to": "47691669357"
+            },
+            {
+                "_from": "47681118061",
+                "_to": "47682101101"
+            },
+            {
+                "_from": "47681118061",
+                "_to": "47674105709"
+            },
+            {
+                "_from": "47670959981",
+                "_to": "47681118061"
+            },
+            {
+                "_from": "47670959981",
+                "_to": "47674105709"
+            },
+            {
+                "_from": "47674105709",
+                "_to": "47684853613"
+            },
+            {
+                "_from": "47674105709",
+                "_to": "47686754157"
+            },
+            {
+                "_from": "47688982381",
+                "_to": "47684853613"
+            },
+            {
+                "_from": "47686754157",
+                "_to": "47688982381"
+            }
+        ];
